@@ -24,8 +24,18 @@ let shape=Bodies.polygon(200,200,5,100,{
         lineWidth: 10
     }
 });
-let wall = Bodies.polygon(50,300,4,30,{isStatic: true});
-let wall2 = Bodies.polygon(700,300,4,30,{isStatic: true});
+let wall = Bodies.polygon(50,300,4,30,{isStatic: true,
+    render: {
+        fillStyle: "white",
+        strokeStyle: "blue",
+        lineWidth: 10
+    }});
+let wall2 = Bodies.polygon(700,300,4,30,{isStatic: true,
+    render: {
+        fillStyle: "green",
+        strokeStyle: "blue",
+        lineWidth: 10
+    }});
 let ball=Bodies.circle(200, 50, 40,{
     render: {
         fillStyle: "white",
@@ -33,7 +43,8 @@ let ball=Bodies.circle(200, 50, 40,{
         lineWidth: 10
     }
 });
-let floor=Bodies.trapezoid(340,400,500,100,.9,{isStatic: true}, {
+let floor=Bodies.trapezoid(340,400,500,100,.9,{
+    isStatic: true,
     render: {
         fillStyle: "white",
         strokeStyle: "blue",
